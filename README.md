@@ -2,7 +2,7 @@
 
 ## Partie obligatoire part1
 
-= [ ] Makefile
+- [ ] Makefile
 
 ---
 
@@ -63,3 +63,10 @@
 - [ ] putnbr_fd
 
 ## Partie bonus
+
+- [ ] lstnew
+- [ ] lstdelone
+- [ ] lstdel
+- [ ] lstadd
+- [ ] lstiter
+- [ ] lstmap
