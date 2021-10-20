@@ -2,15 +2,15 @@
 
 ## Partie obligatoire part1
 
-[] Makefile
+- [ ] Makefile
 
 ---
 
-[] memset
-[] bzero
-[] memcpy
-[] memccpy
-[] memmove
+- [ ] memset
+- [ ] bzero
+- [ ] memcpy
+- [ ] memccpy
+- [ ] memmove
 [] memchr
 [] memcmp
 [] strlen
