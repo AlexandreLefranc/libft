@@ -1,6 +1,6 @@
 #include "libft.h"
 
-size_t strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -8,11 +8,4 @@ size_t strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	printf("%ld", strlen(""));
 }

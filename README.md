@@ -14,10 +14,10 @@
 - [x] memmove
 - [x] memchr
 - [x] memcmp
-- [ ] strlen
-- [ ] strdup
-- [ ] strcpy
-- [ ] strncpy
+- [x] strlen
+- [x] strdup
+- [x] strcpy
+- [x] strncpy
 - [ ] strcat
 - [ ] strncat
 - [ ] strlcat

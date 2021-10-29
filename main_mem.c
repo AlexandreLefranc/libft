@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-// run : crun ft_main.c ft_mem*.c ft_bzero.c
+// run : crun main_mem.c ft_mem*.c ft_bzero.c
 
 int	main()
 {
@@ -168,6 +168,4 @@ int	main()
 		char s2[] = "aaaa";
 		printf("%d : %d\n", memcmp(s1, s2, 0), ft_memcmp(s1, s2, 0));
 	}
-
-
 }
