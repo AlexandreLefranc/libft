@@ -11,9 +11,9 @@
 - [x] bzero
 - [x] memcpy
 - [x] memccpy
-- [ ] memmove
-- [ ] memchr
-- [ ] memcmp
+- [x] memmove
+- [x] memchr
+- [x] memcmp
 - [ ] strlen
 - [ ] strdup
 - [ ] strcpy

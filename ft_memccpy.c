@@ -1,18 +1,20 @@
 #include "libft.h"
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
+	char	*src2;
 
+	src2 = (char *)src;
 	i = 0;
 	while (i < n)
 	{
-		if (*((char *)src + i) == c)
+		if (src2[i] == c)
 		{
-			ft_memset(dest + i, *((char *)src + i), 1);
-			return (dest + i);
+			ft_memset(dest + i, src2[i], 1);
+			return (dest + i + 1);
 		}
-		ft_memset(dest + i, *((char *)src + i), 1);
+		ft_memset(dest + i, src2[i], 1);
 		i++;
 	}
 	return (NULL);

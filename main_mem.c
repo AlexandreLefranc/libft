@@ -79,12 +79,14 @@ int	main()
 		char dest[] = "Bonjour a toi";
 		void *p = memccpy(dest, src, 'i', 10);
 		printf("%s | %s | %p\n", src, dest, p);
+		p = ft_memccpy(dest, src, 'i', 10);
+		printf("%s | %s | %p <- Same pointer\n", src, dest, p);
 	}
 	{
 		char src[] = "Salutation monsieur";
 		char dest[] = "Bonjour a toi";
 		void *p = ft_memccpy(dest, src, 'i', 10);
-		printf("%s | %s | %p\n", src, dest, p);
+		printf("%s | %s | %p <- Same behavior\n", src, dest, p);
 	}
 	printf("\n");
 	{
@@ -101,6 +103,71 @@ int	main()
 	}
 
 	printf("\n==================\nTests of memmove\n==================\n");
+	{
+		char str1[9] = "aabbccdd";
+    	printf("cpy : The string: %s\n", str1);
+    	memcpy(str1 + 2, str1, 6);
+    	printf("cpy : New string: %s (undefined behavior)\n", str1);
+
+		char str2[9] = "aabbccdd";
+    	printf("mov : The string: %s\n", str2);
+    	memmove(str2 + 2, str2, 6);
+    	printf("mov : New string: %s (built-in)\n", str2);
+	}
+	printf("\n");
+	{
+		char str1[9] = "aabbccdd";
+    	printf("cpy : The string: %s\n", str1);
+    	ft_memcpy(str1 + 2, str1, 6);
+    	printf("cpy : New string: %s (undefined behavior)\n", str1);
+
+		char str2[9] = "aabbccdd";
+    	printf("mov : The string: %s\n", str2);
+    	ft_memmove(str2 + 2, str2, 6);
+    	printf("mov : New string: %s (home-made)\n", str2);
+	}
+
 	printf("\n==================\nTests of memchr\n==================\n");
+	{
+		char s[] = "Bonjour a toi";
+		char *p1 = memchr(s, 'a', 15);
+		printf("%p\n", s);
+		printf("%p (builtin)\n", p1);
+		char *p2 = ft_memchr(s, 'a', 15);
+		printf("%p (homemade)\n", p2);
+	}
+	printf("\n");
+	{
+		char s[] = "Bonjour a toi";
+		char *p1 = memchr(s, 'y', 15);
+		printf("%p\n", s);
+		printf("%p (builtin)\n", p1);
+		char *p2 = ft_memchr(s, 'y', 15);
+		printf("%p (homemade)\n", p2);
+	}
+
 	printf("\n==================\nTests of memcmp\n==================\n");
+	{
+		printf("builtin : homemade\n");
+		char s1[] = "aaaa";
+		char s2[] = "aaea";
+		printf("%d : %d\n", memcmp(s1, s2, 4), ft_memcmp(s1, s2, 4));
+	}
+	{
+		char s1[] = "aaza";
+		char s2[] = "aaaa";
+		printf("%d : %d\n", memcmp(s1, s2, 4), ft_memcmp(s1, s2, 4));
+	}
+	{
+		char s1[] = "aaaa";
+		char s2[] = "aaaa";
+		printf("%d : %d\n", memcmp(s1, s2, 4), ft_memcmp(s1, s2, 4));
+	}
+	{
+		char s1[] = "zaaa";
+		char s2[] = "aaaa";
+		printf("%d : %d\n", memcmp(s1, s2, 0), ft_memcmp(s1, s2, 0));
+	}
+
+
 }
