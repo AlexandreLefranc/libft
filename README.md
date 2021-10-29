@@ -2,14 +2,15 @@
 
 ## Partie obligatoire part1
 
+- [ ] libft.h
 - [ ] Makefile
 
 ---
 
-- [ ] memset
-- [ ] bzero
-- [ ] memcpy
-- [ ] memccpy
+- [x] memset
+- [x] bzero
+- [x] memcpy
+- [x] memccpy
 - [ ] memmove
 - [ ] memchr
 - [ ] memcmp
