@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <bsd/string.h>
 #include "libft.h"
 
-// run : crun main_str.c ft_str*.c
+// run : crun -lbsd main_str.c ft_str*.c
 
 int	main()
 {
@@ -50,8 +51,60 @@ int	main()
 	}
 
 	printf("\n==================\nTests of strcat\n==================\n");
+	{
+		char src[] = "Hello";
+		char dst1[20] = "Bonjour !";
+		char dst2[20] = "Bonjour !";
+		printf("%s : %s\n", strcat(dst1, src), ft_strcat(dst2, src));
+	}
 	printf("\n==================\nTests of strncat\n==================\n");
+	{
+		char src[] = "Hello";
+		char dst1[20] = "Bonjour !";
+		char dst2[20] = "Bonjour !";
+		printf("%s : %s\n", strncat(dst1, src, 10), ft_strncat(dst2, src, 10));
+	}
+	{
+		char src[] = "Hello";
+		char dst1[20] = "Bonjour !";
+		char dst2[20] = "Bonjour !";
+		printf("%s : %s\n", strncat(dst1, src, 2), ft_strncat(dst2, src, 2));
+	}
+
 	printf("\n==================\nTests of strlcat\n==================\n");
+	{
+		char src[100] = "ABCD";
+		char dst1[100] = "1234";
+		size_t ret = strlcat(dst1, src, 7);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst1, ret);
+
+		char dst2[100] = "1234";
+		size_t ret2 = ft_strlcat(dst2, src, 7);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
+	}
+	{
+		printf("\n");
+		char src[100] = "ABCD";
+		char dst1[100] = "1234";
+		size_t ret = strlcat(dst1, src, 20);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst1, ret);
+
+		char dst2[100] = "1234";
+		size_t ret2 = ft_strlcat(dst2, src, 20);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
+	}
+	{
+		printf("\n");
+		char src[100] = "ABCD";
+		char dst1[100] = "1234";
+		size_t ret = strlcat(dst1, src, 2);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst1, ret);
+
+		char dst2[100] = "1234";
+		size_t ret2 = ft_strlcat(dst2, src, 2);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
+	}
+
 	printf("\n==================\nTests of strchr\n==================\n");
 	printf("\n==================\nTests of strrchr\n==================\n");
 	printf("\n==================\nTests of strstr\n==================\n");

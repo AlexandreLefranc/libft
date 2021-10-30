@@ -18,9 +18,9 @@
 - [x] strdup
 - [x] strcpy
 - [x] strncpy
-- [ ] strcat
-- [ ] strncat
-- [ ] strlcat
+- [x] strcat
+- [x] strncat
+- [x] strlcat
 - [ ] strchr
 - [ ] strrchr
 - [ ] strstr
