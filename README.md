@@ -27,14 +27,14 @@
 - [x] strnstr
 - [x] strcmp
 - [x] strncmp
-- [ ] atoi
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
-- [ ] isprint
-- [ ] toupper
-- [ ] tolower
+- [x] atoi
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [x] isascii
+- [x] isprint
+- [x] toupper
+- [x] tolower
 
 ## Partie obligatoire part2
 
