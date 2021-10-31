@@ -2,8 +2,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	size_t dest_len;
-	size_t i;
+	size_t	dest_len;
+	size_t	i;
 
 	dest_len = ft_strlen(dest);
 	i = 0;

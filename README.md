@@ -21,12 +21,12 @@
 - [x] strcat
 - [x] strncat
 - [x] strlcat
-- [ ] strchr
-- [ ] strrchr
-- [ ] strstr
-- [ ] strnstr
-- [ ] strcmp
-- [ ] strncmp
+- [x] strchr
+- [x] strrchr
+- [x] strstr
+- [x] strnstr
+- [x] strcmp
+- [x] strncmp
 - [ ] atoi
 - [ ] isalpha
 - [ ] isdigit

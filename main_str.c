@@ -6,6 +6,7 @@
 
 int	main()
 {
+	system("norminette ft_str*.c");
 	printf("\n==================\nTests of strlen\n==================\n");
 	{
 		char s1[] = "abcd";
@@ -106,9 +107,69 @@ int	main()
 	}
 
 	printf("\n==================\nTests of strchr\n==================\n");
+	{
+		char s[] = "Salut a toi";
+		printf("%p : %p\n", strchr(s, 't'), ft_strchr(s, 't'));
+		printf("%p : %p\n", strchr(s, 'i'), ft_strchr(s, 'i'));
+		printf("%p : %p\n", strchr(s, '\0'), ft_strchr(s, '\0'));
+		printf("%p : %p\n", strchr(s, 'z'), ft_strchr(s, 'z'));
+	}
 	printf("\n==================\nTests of strrchr\n==================\n");
+	{
+		char s[] = "Salut a toi";
+		char s2[] = "";
+		printf("%p : %p\n", strrchr(s, 't'), ft_strrchr(s, 't'));
+		printf("%p : %p\n", strrchr(s, 'i'), ft_strrchr(s, 'i'));
+		printf("%p : %p\n", strrchr(s, '\0'), ft_strrchr(s, '\0'));
+		printf("%p : %p\n", strrchr(s, 'z'), ft_strrchr(s, 'z'));
+		printf("%p : %p\n", strrchr(s2, 'z'), ft_strrchr(s2, 'z'));
+		printf("%p : %p\n", strrchr(s2, '\0'), ft_strrchr(s2, '\0'));
+	}
 	printf("\n==================\nTests of strstr\n==================\n");
+	{
+		char s[] = "Salutation mon pote";
+		char s2[] = "";
+		printf("%s : %s\n", strstr(s, ""), ft_strstr(s, ""));
+		printf("%s : %s\n", strstr(s, "mon"), ft_strstr(s, "mon"));
+		printf("%s : %s\n", strstr(s, "Hey"), ft_strstr(s, "Hey"));
+		printf("%s : %s\n", strstr(s2, "Hey"), ft_strstr(s2, "Hey"));
+		printf("%s : %s\n", strstr(s2, ""), ft_strstr(s2, ""));
+	}
 	printf("\n==================\nTests of strnstr\n==================\n");
+	{
+		const char *large = "Foo Bar Baz";
+        const char *small = "Bar";
+		printf("%s : %s\n", strnstr(large, small, 4), ft_strnstr(large, small, 4));
+		printf("%s : %s\n", strnstr(large, small, 10), ft_strnstr(large, small, 10));
+		printf("%s : %s\n", strnstr(large, small, 6), ft_strnstr(large, small, 6));
+		printf("%s : %s\n", strnstr(large, small, 7), ft_strnstr(large, small, 7));
+		printf("%s : %s\n", strnstr(large, "", 7), ft_strnstr(large, "", 7));
+		printf("%s : %s\n", strnstr(large, small, 0), ft_strnstr(large, small, 0));
+	}
 	printf("\n==================\nTests of strcmp\n==================\n");
+	{
+		char s1[] = "Yo";
+		char s2[] = "Yoplay";
+		printf("%d : %d\n", strcmp(s1, s2), ft_strcmp(s1, s2));
+		printf("%d : %d\n", strcmp(s1, s1), ft_strcmp(s1, s1));
+		printf("%d : %d\n", strcmp(s1, ""), ft_strcmp(s1, ""));
+		char s3[] = "abcd";
+		char s4[] = "abcD";
+		printf("%d : %d\n", strcmp(s3, s4), ft_strcmp(s3, s4));
+	}
 	printf("\n==================\nTests of strncmp\n==================\n");
+	{
+		char s1[] = "Yo";
+		char s2[] = "Yoplay";
+		printf("%d : %d\n", strncmp(s1, s2, 2), ft_strncmp(s1, s2, 2));
+		printf("%d : %d\n", strncmp(s1, s2, 10), ft_strncmp(s1, s2, 10));
+		printf("%d : %d\n", strncmp(s1, s1, 2), ft_strncmp(s1, s1, 2));
+		printf("%d : %d\n", strncmp(s1, s1, 10), ft_strncmp(s1, s1, 10));
+		printf("%d : %d\n", strncmp(s1, "", 0), ft_strncmp(s1, "", 0));
+		printf("%d : %d\n", strncmp(s1, "", 1), ft_strncmp(s1, "", 1));
+		char s3[] = "abcd";
+		char s4[] = "abcD";
+		printf("%d : %d\n", strncmp(s3, s4, 3), ft_strncmp(s3, s4, 3));
+		printf("%d : %d\n", strncmp(s3, s4, 5), ft_strncmp(s3, s4, 5));
+	}
 }
