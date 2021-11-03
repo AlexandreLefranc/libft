@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:15:59 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:16:01 by alefranc         ###   ########.fr       */
+/*   Created: 2021/11/02 21:17:56 by alefranc          #+#    #+#             */
+/*   Updated: 2021/11/02 21:17:58 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_strdel(char **as)
 {
-	unsigned char	*s2;
-	size_t			i;
-
-	s2 = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (s2[i] == c)
-			return (s2 + i);
-		i++;
-	}
-	return (NULL);
+	ft_memdel((void **)as);
 }

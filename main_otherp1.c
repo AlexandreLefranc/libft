@@ -6,7 +6,8 @@
 
 int	main()
 {
-	system("norminette ft_is*.c");
+	system("norminette ft_is*.c ft_to*.c ft_atoi.c");
+	/*
 	printf("\n==================\nTests of islower\n==================\n");
 	{
 		printf("%d : %d\n", islower('x'), ft_islower('x'));
@@ -17,6 +18,7 @@ int	main()
 		printf("%d : %d\n", isupper('x'), ft_isupper('x'));
 		printf("%d : %d\n", isupper('X'), ft_isupper('X'));
 	}
+	*/
 	printf("\n==================\nTests of isalpha\n==================\n");
 	{
 		printf("%d : %d\n", isalpha('x'), ft_isalpha('x'));
@@ -71,6 +73,7 @@ int	main()
 		printf("%c : %c\n", tolower('@'), ft_tolower('@'));
 		printf("%c : %c\n", tolower('1'), ft_tolower('1'));
 	}
+	/*
 	printf("\n==================\nTests of isspace\n==================\n");
 	{
 		printf("%d : %d\n", isspace(' '), ft_isspace(' '));
@@ -81,6 +84,7 @@ int	main()
 		printf("%d : %d\n", isspace('\r'), ft_isspace('\r'));
 		printf("%d : %d\n", isspace('a'), ft_isspace('a'));
 	}
+	*/
 	printf("\n==================\nTests of atoi\n==================\n");
 	{
 		printf("%d : %d\n", atoi("---+--+1234ab567"), ft_atoi("---+--+1234ab567"));

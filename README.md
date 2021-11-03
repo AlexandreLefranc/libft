@@ -38,20 +38,20 @@
 
 ## Partie obligatoire part2
 
-- [ ] memalloc
-- [ ] memdel
-- [ ] strnew
-- [ ] strdel
-- [ ] strclr
-- [ ] striter
-- [ ] striteri
-- [ ] strmap
-- [ ] strmapi
-- [ ] strequ
-- [ ] strnequ
-- [ ] strsub
-- [ ] strjoin
-- [ ] strtrim
+- [x] memalloc
+- [x] memdel
+- [x] strnew
+- [x] strdel
+- [x] strclr
+- [x] striter
+- [x] striteri
+- [x] strmap
+- [x] strmapi
+- [x] strequ
+- [x] strnequ
+- [x] strsub
+- [x] strjoin
+- [x] strtrim
 - [ ] strsplit
 - [ ] itoa
 - [ ] putchar

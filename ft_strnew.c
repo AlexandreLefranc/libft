@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:15:59 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:16:01 by alefranc         ###   ########.fr       */
+/*   Created: 2021/11/02 21:13:06 by alefranc          #+#    #+#             */
+/*   Updated: 2021/11/02 21:13:08 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnew(size_t size)
 {
-	unsigned char	*s2;
-	size_t			i;
+	char	*ptr;
 
-	s2 = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (s2[i] == c)
-			return (s2 + i);
-		i++;
-	}
-	return (NULL);
+	ptr = (char *)ft_memalloc(size + 1);
+	if (ptr == NULL)
+		return (NULL);
+	return (ptr);
 }

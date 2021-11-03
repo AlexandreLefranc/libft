@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:15:59 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:16:01 by alefranc         ###   ########.fr       */
+/*   Created: 2021/11/02 21:13:17 by alefranc          #+#    #+#             */
+/*   Updated: 2021/11/02 21:13:20 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	unsigned char	*s2;
-	size_t			i;
-
-	s2 = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (s2[i] == c)
-			return (s2 + i);
-		i++;
-	}
-	return (NULL);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	return (0);
 }
