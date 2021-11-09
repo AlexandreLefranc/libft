@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 14:35:19 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/09 14:42:59 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:38:41 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int n2;
+	long int	n2;
 
 	n2 = n;
 	if (n2 < 0)
@@ -27,6 +27,6 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 	{
 		ft_putnbr_fd(n2 / 10, fd);
-		ft_putchar_fd(n2 % 10 + 48, fd);	
+		ft_putchar_fd(n2 % 10 + 48, fd);
 	}
 }

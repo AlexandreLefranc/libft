@@ -15,12 +15,7 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	
-	if (len > ft_strlen(s + start - 1))
-	{
-		ft_putendl_fd("Error in ft_strsub: trying to sub outside of s", 2);
-		return (NULL);
-	}
+
 	sub = malloc(sizeof(*sub) * (len + 1));
 	if (sub == NULL)
 		return (NULL);

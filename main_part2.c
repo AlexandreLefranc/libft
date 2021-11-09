@@ -29,22 +29,24 @@ int	main()
 	printf("\n==================\nTests of memalloc\n==================\n");
 	{
 		void *ptr = ft_memalloc(10);
-		printf("%p\n", ptr);
+		printf("A non-null pointer : %p\n", ptr);
 		free(ptr);
 	}
 	printf("\n==================\nTests of memdel\n==================\n");
 	{
 		void *ptr = ft_memalloc(10);
-		printf("%p\n", ptr);
+		printf("A non-null pointer : %p\n", ptr);
 		ft_memdel(&ptr);
-		printf("%p\n", ptr);
+		printf("(nil) : %p\n", ptr);
 		ft_memdel(&ptr);
-		printf("%p\n", ptr);
+		printf("(nil) : %p\n", ptr);
 	}
 	printf("\n==================\nTests of strnew\n==================\n");
 	{
-		int size = 100;
+		int size = 10;
 		char *str = ft_strnew(size);
+		printf("A non-null pointer : %p\n", str);
+		printf("11 zeros : ");
 		for (int i = 0; i < size+1; i++)
 			printf("%d ", str[i]);
 		printf("\n");
@@ -53,19 +55,21 @@ int	main()
 	printf("\n==================\nTests of strdel\n==================\n");
 	{
 		char *str = ft_strnew(10);
-		printf("%p\n", str);
+		printf("A non-null pointer : %p\n", str);
 		ft_strdel(&str);
-		printf("%p\n", str);
+		printf("(nil) : %p\n", str);
 		ft_strdel(&str);
-		printf("%p\n", str);
+		printf("(nil) : %p\n", str);
 	}
 	printf("\n==================\nTests of strclr\n==================\n");
 	{
 		char *str = ft_strdup("Hello");
+		printf("72 101 108 108 111 0 : ");
 		for (int i = 0; i<6; i++)
 			printf("%d ", str[i]);
 		ft_strclr(str);
 		printf("\n");
+		printf("0 0 0 0 0 0 : ");
 		for (int i = 0; i<6; i++)
 			printf("%d ", str[i]);
 		printf("\n");
@@ -75,6 +79,7 @@ int	main()
 	{
 		char	*str = ft_strdup("abcd");
 		printf("Initial string before function| %s\n", str);
+		printf("Applying function shift1\n");
 		ft_striter(str, &shift1);
 		printf("Initial string after function | %s\n", str);
 	}
@@ -82,6 +87,7 @@ int	main()
 	{
 		char	*str = ft_strdup("abcd");
 		printf("Initial string before function| %s\n", str);
+		printf("Applying function shift1i\n");
 		ft_striteri(str, &shift1i);
 		printf("Initial string after function | %s\n", str);
 	}
@@ -89,6 +95,7 @@ int	main()
 	{
 		char	*str = ft_strdup("abcd");
 		printf("Initial string before function| %s | %p\n", str, str);
+		printf("Applying function shift1map\n");
 		char	*str2 = ft_strmap(str, &shift1map);
 		printf("Initial string after function | %s | %p\n", str, str);
 		printf("New string | %s | %p\n", str2, str2);
@@ -97,6 +104,7 @@ int	main()
 	{
 		char	*str = ft_strdup("abcd");
 		printf("Initial string before function| %s | %p\n", str, str);
+		printf("Applying function shift1mapi\n");
 		char	*str2 = ft_strmapi(str, &shift1mapi);
 		printf("Initial string after function | %s | %p\n", str, str);
 		printf("New string | %s | %p\n", str2, str2);	
@@ -145,8 +153,72 @@ int	main()
 	}
 	printf("\n==================\nTests of strsplit\n==================\n");
 	{
+		char s[] = "*salut*les***gens*";
+		printf("%s ", s);
+		char **tab = ft_strsplit(s, '*');
+        int i = 0;
+        while (tab[i] != NULL)
+        {
+            printf("[%s] ", tab[i]);
+            free(tab[i]);
+            i++;
+        }
+        free(tab);
+        printf("\n");
+    }
+
+    {
+        char s[] = "salut*les***gens*";
+        printf("%s ", s);
+        char **tab = ft_strsplit(s, '*');
+        int i = 0;
+        while (tab[i] != NULL)
+        {
+            printf("[%s] ", tab[i]);
+            free(tab[i]);
+            i++;
+        }
+        free(tab);
+        printf("\n");
+    }
+
+    {
+        char s[] = "*salut*les***gens";
+        printf("%s ", s);
+        char **tab = ft_strsplit(s, '*');
+        int i = 0;
+        while (tab[i] != NULL)
+        {
+            printf("[%s] ", tab[i]);
+            free(tab[i]);
+            i++;
+        }
+        free(tab);
+        printf("\n");
+    }
+
+    {
+        char s[] = "***salut*les***gens***pouet****";
+        printf("%s ", s);
+        char **tab = ft_strsplit(s, '*');
+        int i = 0;
+        while (tab[i] != NULL)
+        {
+            printf("[%s] ", tab[i]);
+            free(tab[i]);
+            i++;
+        }
+        free(tab);
+        printf("\n");
+    }
+	printf("\n==================\nTests of itoa\n==================\n");
+	{
+		printf("%d : %s\n", 42, ft_itoa(42));
+		printf("%d : %s\n", 0, ft_itoa(0));
+		printf("%d : %s\n", -42, ft_itoa(-42));
+		printf("%d : %s\n", 2147483647, ft_itoa(2147483647));
+		printf("%ld : %s\n", -2147483648, ft_itoa(-2147483648));
 	}
-	printf("\n==================\nTests of stritoa\n==================\n");
 	printf("\n==================\nTests of putchar\n==================\n");
 	{
 		ft_putchar('x');

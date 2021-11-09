@@ -52,16 +52,16 @@
 - [x] strsub
 - [x] strjoin
 - [x] strtrim
-- [ ] strsplit
-- [ ] itoa
+- [x] strsplit
+- [x] itoa
 - [x] putchar
 - [x] putstr
 - [x] putendl
 - [x] putnbr
-- [x] putchar_df
-- [x] putstr_fd
-- [x] putendl_fd
-- [x] putnbr_fd
+- [x] putchar\_fd
+- [x] putstr\_fd
+- [x] putendl\_fd
+- [x] putnbr\_fd
 
 ## Partie bonus
 
