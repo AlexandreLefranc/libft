@@ -54,14 +54,14 @@
 - [x] strtrim
 - [ ] strsplit
 - [ ] itoa
-- [ ] putchar
-- [ ] putstr
-- [ ] putendl
-- [ ] putnbr
-- [ ] putchar_df
-- [ ] putstr_fd
-- [ ] putendl_fd
-- [ ] putnbr_fd
+- [x] putchar
+- [x] putstr
+- [x] putendl
+- [x] putnbr
+- [x] putchar_df
+- [x] putstr_fd
+- [x] putendl_fd
+- [x] putnbr_fd
 
 ## Partie bonus
 

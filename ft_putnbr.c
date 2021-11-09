@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 21:12:24 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:12:25 by alefranc         ###   ########.fr       */
+/*   Created: 2021/11/09 14:43:09 by alefranc          #+#    #+#             */
+/*   Updated: 2021/11/09 14:44:44 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putnbr(int n)
 {
-	char	*sub;
-	
-	if (len > ft_strlen(s + start - 1))
-	{
-		ft_putendl_fd("Error in ft_strsub: trying to sub outside of s", 2);
-		return (NULL);
-	}
-	sub = malloc(sizeof(*sub) * (len + 1));
-	if (sub == NULL)
-		return (NULL);
-	ft_strncpy(sub, s + start, len);
-	sub[len] = '\0';
-	return (sub);
+	ft_putnbr_fd(n, 1);
 }

@@ -144,6 +144,8 @@ int	main()
 		printf("Yo yoo yooo yoooo : %s\n", ft_strtrim(" \n\t  Yo yoo yooo yoooo  \t \n "));
 	}
 	printf("\n==================\nTests of strsplit\n==================\n");
+	{
+	}
 	printf("\n==================\nTests of stritoa\n==================\n");
 	printf("\n==================\nTests of putchar\n==================\n");
 	{
@@ -158,6 +160,15 @@ int	main()
 		ft_putendl("Hello");
 	}
 	printf("\n==================\nTests of putnbr\n==================\n");
+	{
+		ft_putnbr(9);
+		printf("\n");
+		ft_putnbr(-2147483648);
+		printf("\n");
+		ft_putnbr(2147473647);
+		printf("\n");
+		ft_putnbr(0);
+	}
 	printf("\n==================\nTests of putchar_fd\n==================\n");
 	{
 		ft_putchar_fd('x', 1);
@@ -171,4 +182,13 @@ int	main()
 		ft_putendl_fd("Hello", 1);
 	}
 	printf("\n==================\nTests of putnbr_fd\n==================\n");
+	{
+		ft_putnbr_fd(9, 1);
+		printf("\n");
+		ft_putnbr_fd(-2147483648, 1);
+		printf("\n");
+		ft_putnbr_fd(2147473647, 1);
+		printf("\n");
+		ft_putnbr_fd(0, 1);
+	}
 }
