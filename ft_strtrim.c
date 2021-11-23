@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:12:14 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:12:16 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:04:59 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s)
 			ptr2 = (char *)s + i;
 		i++;
 	}
-	trimmed = ft_strsub(s, ptr1 - s, ptr2 - ptr1 + 1);
+	trimmed = ft_substr(s, ptr1 - s, ptr2 - ptr1 + 1);
 	if (trimmed == NULL)
 		return (NULL);
 	return (trimmed);

@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:52:37 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/23 15:57:05 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:06:06 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	fill_tab(char **tab, char const *s, char c, int tab_len)
 				i++;
 				len_word++;
 			}
-			tab[n] = ft_strsub(s, i - len_word, len_word);
+			tab[n] = ft_substr(s, i - len_word, len_word);
 			n++;
 		}
 	}

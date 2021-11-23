@@ -5,6 +5,8 @@
 
 int	main()
 {
+	printf("\033[0;31m");
 	printf("============= lstlast ===========\n");
+	printf("\033[0m");
 	return (0);
 }

@@ -2,62 +2,44 @@
 
 ## Partie obligatoire part1
 
-- [ ] libft.h
+- [x] libft.h
 - [ ] Makefile
 
 ---
 
-- [x] memset
-- [x] bzero
-- [x] memcpy
-- [x] memccpy
-- [x] memmove
-- [x] memchr
-- [x] memcmp
-- [x] strlen
-- [x] strdup
-- [x] strcpy
-- [x] strncpy
-- [x] strcat
-- [x] strncat
-- [x] strlcat
-- [x] strchr
-- [x] strrchr
-- [x] strstr
-- [x] strnstr
-- [x] strcmp
-- [x] strncmp
-- [x] atoi
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
 - [x] isascii
 - [x] isprint
+- [x] strlen
+- [x] memset
+- [x] bzero
+- [x] memcpy
+- [x] memmove
+- [ ] strlcpy
+- [x] strlcat
 - [x] toupper
 - [x] tolower
+- [x] strchr
+- [x] strrchr
+- [x] strncmp
+- [x] memchr
+- [x] memcmp
+- [x] strnstr
+- [x] atoi
+- [x] calloc
+- [x] strdup
 
 ## Partie obligatoire part2
 
-- [x] memalloc
-- [x] memdel
-- [x] strnew
-- [x] strdel
-- [x] strclr
-- [x] striter
-- [x] striteri
-- [x] strmap
-- [x] strmapi
-- [x] strequ
-- [x] strnequ
-- [x] strsub
+- [x] substr
 - [x] strjoin
 - [x] strtrim
-- [x] strsplit
+- [x] split
 - [x] itoa
-- [x] putchar
-- [x] putstr
-- [x] putendl
-- [x] putnbr
+- [x] strmapi
+- [x] striteri
 - [x] putchar\_fd
 - [x] putstr\_fd
 - [x] putendl\_fd
@@ -66,8 +48,11 @@
 ## Partie bonus
 
 - [ ] lstnew
+- [ ] lstadd\_front
+- [ ] lstsize
+- [ ] lstlast
+- [ ] lstadd\_back
 - [ ] lstdelone
-- [ ] lstdel
-- [ ] lstadd
+- [ ] lstclear
 - [ ] lstiter
 - [ ] lstmap

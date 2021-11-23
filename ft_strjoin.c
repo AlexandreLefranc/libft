@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:15:06 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:15:08 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:04:31 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joined = malloc((s1_len + s2_len + 1) * sizeof(*joined));
 	if (joined == NULL)
 		return (NULL);
-	ft_strncat(joined, s1, s1_len);
-	ft_strncat(joined + s1_len, s2, s2_len);
+	ft_strlcat(joined, s1, s1_len);
+	ft_strlcat(joined + s1_len, s2, s2_len);
 	joined[s1_len + s2_len] = '\0';
 	return (joined);
 }
