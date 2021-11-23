@@ -6,12 +6,11 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:22:41 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/22 17:43:38 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:58:58 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	*calloc(size_t nmemb, size_t size)
 {

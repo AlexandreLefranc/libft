@@ -6,13 +6,13 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:12:24 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:12:25 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:57:30 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 

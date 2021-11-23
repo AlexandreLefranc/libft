@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:52:37 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/09 16:36:42 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/23 15:57:05 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void	fill_tab(char **tab, char const *s, char c, int tab_len)
 	}
 }
 
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	number_of_words;
 	char	**tab;
@@ -77,69 +77,3 @@ char	**ft_strsplit(char const *s, char c)
 	fill_tab(tab, s, c, number_of_words);
 	return (tab);
 }
-/*
-#include <stdio.h>
-
-int	main()
-{
-	{
-		char s[] = "*salut*les***gens*";
-		printf("%s ", s);
-		char **tab = ft_strsplit(s, '*');
-		int	i = 0;
-		while (tab[i] != NULL)
-		{
-			printf("[%s] ", tab[i]);
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		printf("\n");
-	}
-	
-	{
-		char s[] = "salut*les***gens*";
-		printf("%s ", s);
-		char **tab = ft_strsplit(s, '*');
-		int	i = 0;
-		while (tab[i] != NULL)
-		{
-			printf("[%s] ", tab[i]);
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		printf("\n");
-	}
-
-	{
-		char s[] = "*salut*les***gens";
-		printf("%s ", s);
-		char **tab = ft_strsplit(s, '*');
-		int	i = 0;
-		while (tab[i] != NULL)
-		{
-			printf("[%s] ", tab[i]);
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		printf("\n");
-	}
-	
-	{
-		char s[] = "***salut*les***gens***pouet****";
-		printf("%s ", s);
-		char **tab = ft_strsplit(s, '*');
-		int	i = 0;
-		while (tab[i] != NULL)
-		{
-			printf("[%s] ", tab[i]);
-			free(tab[i]);
-			i++;
-		}
-		free(tab);
-		printf("\n");
-	}
-}
-*/
