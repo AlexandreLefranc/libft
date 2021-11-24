@@ -7,3 +7,5 @@ for filename in ./main/main_*.c; do
 	./a.out
 	rm ./a.out
 done
+
+make fclean

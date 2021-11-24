@@ -40,6 +40,17 @@ int	main()
 		size_t ret2 = ft_strlcat(dst2, src, 2);
 		printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
 	}
+	{
+		printf("\n");
+		char src[100] = "lorem ipsum dolor sit amet";
+		char dst1[14] = "a";
+		size_t ret = strlcat(dst1, src, 15);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst1, ret);
+
+		char dst2[14] = "a";
+		size_t ret2 = ft_strlcat(dst2, src, 15);
+		printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
+	}
 
 	return (0);
 }

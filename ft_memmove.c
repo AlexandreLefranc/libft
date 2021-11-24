@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 21:16:32 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/02 21:16:33 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/24 11:27:44 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	dst2 = (char *)dest;
 	src2 = (char *)src;
-	tmp = (char *)malloc(sizeof(*tmp) * n);
+	tmp = (void *)malloc(sizeof(*tmp) * n);
 	if (tmp == NULL)
 		return (NULL);
 	i = 0;
