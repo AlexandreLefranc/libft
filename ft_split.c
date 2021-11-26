@@ -70,8 +70,10 @@ char	**ft_split(char const *s, char c)
 	size_t	number_of_words;
 	char	**tab;
 
+	if (s == NULL)
+		return (NULL);
 	number_of_words = countwords(s, c);
-	tab = (char **)malloc((number_of_words + 1) * sizeof(char *));
+	tab = (char **)ft_calloc((number_of_words + 1), sizeof(char *));
 	if (tab == NULL)
 		return (NULL);
 	fill_tab(tab, s, c, number_of_words);
