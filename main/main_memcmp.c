@@ -5,7 +5,7 @@
 
 int	main()
 {
-	printf("\033[0;31m");
+	printf("\033[0;32m");
 	printf("============= memcmp ===========\n");
 	printf("\033[0m");
 	{

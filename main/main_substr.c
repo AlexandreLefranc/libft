@@ -5,7 +5,7 @@
 
 int	main()
 {
-	printf("\033[0;31m");
+	printf("\033[0;33m");
 	printf("============= substr ===========\n");
 	printf("\033[0m");
 	{
@@ -13,6 +13,10 @@ int	main()
 		printf("Hey comment ca va ? : %s\n", ft_substr(s, 0, 100));
 		printf("Hey c : %s\n", ft_substr(s, 0, 5));
 		printf("comment : %s\n", ft_substr(s, 4, 7));
+	}
+	{
+		char	*s = ft_substr("tripouille", 100, 1);
+		printf(" : %s\n", s);
 	}
 	return (0);
 }

@@ -3,22 +3,25 @@
 #include <unistd.h>
 #include "../libft.h"
 
-static void	shift1i(unsigned int i, char *s)
+static void iter(unsigned int i, char *s)
 {
-	s[i] = s[i] + 1;
+	*s += i;
 }
 
 int	main()
 {
-	printf("\033[0;31m");
+	printf("\033[0;33m");
 	printf("============= striteri ===========\n");
 	printf("\033[0m");
 	{
-		char	*str = ft_strdup("abcd");
-		printf("Initial string before function| %s\n", str);
-		printf("Applying function shift1i\n");
-		ft_striteri(str, &shift1i);
-		printf("Initial string after function | %s\n", str);
+		char	s[] = "abcd";
+		ft_striteri(s, shift1i);
+		printf("Initial string after function | %s\n", s);
+	}
+	{
+		char	s[] = "0000000000";
+		ft_striteri(s, iter);
+		printf("%s : %s\n", "0123456789", s);
 	}
 	return (0);
 }

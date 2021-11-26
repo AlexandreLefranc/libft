@@ -16,6 +16,8 @@ static size_t	count_n_len(int n)
 {
 	size_t	count;
 
+	if (n == 0)
+		return ((size_t)1);
 	count = 0;
 	if (n < 0)
 		count++;

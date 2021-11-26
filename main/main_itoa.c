@@ -5,7 +5,7 @@
 
 int	main()
 {
-	printf("\033[0;31m");
+	printf("\033[0;34m");
 	printf("============= itoa ===========\n");
 	printf("\033[0m");
 	{

@@ -67,5 +67,17 @@ int	main()
         free(tab);
         printf("\n");
     }
+	{
+		char **tab = ft_split("hey salut", ' ');
+		int i = 0;
+        while (tab[i] != NULL)
+        {
+            printf("[%s] ", tab[i]);
+            free(tab[i]);
+            i++;
+        }
+        free(tab);
+        printf("\n");
+	}
 	return (0);
 }

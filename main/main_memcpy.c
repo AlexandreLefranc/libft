@@ -12,13 +12,52 @@ int	main()
 		char src[] = "Salut";
 		char dest[] = "Bonjour a toi";
 		memcpy(dest, src, 4);
-		printf("%s | %s\n", src, dest);
+		printf("builtin  | %s | %s\n", src, dest);
 	}
 	{
 		char src[] = "Salut";
 		char dest[] = "Bonjour a toi";
 		ft_memcpy(dest, src, 4);
-		printf("%s | %s\n", src, dest);
+		printf("homemade | %s | %s\n", src, dest);
 	}
+	printf("\n");
+	{
+		char src[] = "Salut";
+		char dest[] = "Bonjour a toi";
+		memcpy(NULL, NULL, 4);
+		printf("builtin  | %s | %s\n", src, dest);
+	}
+	{
+		char src[] = "Salut";
+		char dest[] = "Bonjour a toi";
+		ft_memcpy(NULL, NULL, 4);
+		printf("homemade | %s | %s\n", src, dest);
+	}
+	// printf("\n");
+	// {
+	// 	char src[] = "Salut";
+	// 	char dest[] = "Bonjour a toi";
+	// 	memcpy(NULL, src, 4);
+	// 	printf("builtin  | %s | %s\n", src, dest);
+	// }
+	// {
+	// 	char src[] = "Salut";
+	// 	char dest[] = "Bonjour a toi";
+	// 	ft_memcpy(NULL, src, 4);
+	// 	printf("homemade | %s | %s\n", src, dest);
+	// }
+	// printf("\n");
+	// {
+	// 	char src[] = "Salut";
+	// 	char dest[] = "Bonjour a toi";
+	// 	memcpy(dest, NULL, 4);
+	// 	printf("builtin  | %s | %s\n", src, dest);
+	// }
+	// {
+	// 	char src[] = "Salut";
+	// 	char dest[] = "Bonjour a toi";
+	// 	ft_memcpy(dest, NULL, 4);
+	// 	printf("homemade | %s | %s\n", src, dest);
+	// }
 	return (0);
 }

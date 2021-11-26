@@ -5,15 +5,19 @@
 
 int	main()
 {
-	printf("\033[0;31m");
+	printf("\033[0;32m");
 	printf("============= strtrim ===========\n");
 	printf("\033[0m");
 	{
-		printf("Yo : %s\n", ft_strtrim("Yo"));
-		printf("Yo : %s\n", ft_strtrim(" \n\t Yo"));
-		printf("Yo : %s\n", ft_strtrim("Yo \n\t\n "));
-		printf("Yo : %s\n", ft_strtrim(" \n\tYo \n\t"));
-		printf("Yo yoo yooo yoooo : %s\n", ft_strtrim(" \n\t  Yo yoo yooo yoooo  \t \n "));
+		printf("Yo : %s\n", ft_strtrim("Yo", " \n\t"));
+		printf("Yo : %s\n", ft_strtrim(" \n\t Yo", " \n\t"));
+		printf("Yo : %s\n", ft_strtrim("Yo \n\t\n ", " \n\t"));
+		printf("Yo : %s\n", ft_strtrim(" \n\tYo \n\t", " \n\t"));
+		printf("Yo yoo yooo yoooo : %s\n", ft_strtrim(" \n\t  Yo yoo yooo yoooo  \t \n ", " \n\t"));
+	}
+	{
+		char *s = ft_strtrim("   xxx   xxx", " x");
+		printf(" : %s\n", s);
 	}
 	return (0);
 }
