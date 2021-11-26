@@ -26,28 +26,50 @@ while We are not at the end of src AND We didn't exceed size - 1 (-1 because \0)
 Finish with \0
 */
 
+// size_t	ft_strlcat(char *dest, const char *src, size_t size)
+// {
+// 	size_t	dest_len;
+// 	size_t	src_len;
+// 	size_t	returned;
+// 	size_t	i;
+//
+// 	dest_len = ft_strlen(dest);
+// 	src_len = ft_strlen(src);
+// 	returned = src_len;
+// 	i = 0;
+// 	if (size == 0)
+// 		return (returned);
+// 	if (size < dest_len)
+// 		returned = returned + size;
+// 	else
+// 		returned = returned + dest_len;
+// 	while (src[i] != '\0' && dest_len + i < size - 1)
+// 	{
+// 		dest[dest_len + i] = src[i];
+// 		i++;
+// 	}
+// 	dest[dest_len + i] = '\0';
+// 	return (returned);
+// }
+
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	returned;
 	size_t	i;
+	size_t	j;
 
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	returned = src_len;
-	i = 0;
 	if (size == 0)
-		return (returned);
-	if (size < dest_len)
-		returned = returned + size;
-	else
-		returned = returned + dest_len;
-	while (src[i] != '\0' && dest_len + i < size - 1)
-	{
-		dest[dest_len + i] = src[i];
+		return (ft_strlen(src));
+	i = 0;
+	while (dest[i] != '\0')
 		i++;
+	j = i;
+	while (src[j - i] != '\0' && j < size - 1 && size > 0)
+	{
+		dest[j] = src[j - i];
+		j++;
 	}
-	dest[dest_len + i] = '\0';
-	return (returned);
+	dest[j] = '\0';
+	if (j > size)
+		return (j + ft_strlen(src));
+	return(ft_strlen(src));
 }

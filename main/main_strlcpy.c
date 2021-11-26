@@ -5,7 +5,7 @@
 
 int	main()
 {
-	printf("\033[0;38m");
+	printf("\033[0;31m");
 	printf("============= strlcpy ===========\n");
 	printf("\033[0m");
 	{
