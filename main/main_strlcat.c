@@ -48,30 +48,22 @@ int	main()
 	{
 		{
 			char *dest = (char *)malloc(sizeof(char) * 15);
+			char *dest2 = (char *)malloc(sizeof(char) * 15);
 			dest[14] = 'a';
+			dest2[14] = 'a';
 			size_t r = strlcat(dest, "lorem ipsum dolor sit amet", 15);
-			printf("%s %i : ", dest, (int)r);
-			free(dest);
-		}
-		{
-			char *dest = (char *)malloc(sizeof(char) * 15);
-			dest[14] = 'a';
-			size_t r = ft_strlcat(dest, "lorem ipsum dolor sit amet", 15);
-			printf("%s %i\n", dest, (int)r);
-			free(dest);
+			size_t r2 = ft_strlcat(dest2, "lorem ipsum dolor sit amet", 15);
+			printf("%s %i : %s %i\n", dest, (int)r, dest2, (int)r2);
 		}
 	}
-	// {
-	// 	printf("\n");
-	// 	char src[100] = "lorem ipsum dolor sit amet";
-	// 	char dst1[14] = "a";
-	// 	size_t ret = strlcat(dst1, src, 15);
-	// 	printf("src = %s | dst = %s | return = %ld\n", src, dst1, ret);
-	//
-	// 	char dst2[14] = "a";
-	// 	size_t ret2 = ft_strlcat(dst2, src, 15);
-	// 	printf("src = %s | dst = %s | return = %ld\n", src, dst2, ret2);
-	// }
-
+	{
+		char *dest = (char *)malloc(sizeof(char) * 15);
+		char *dest2 = (char *)malloc(sizeof(char) * 15);
+		memset(dest, 'r', 15);
+		memset(dest2, 'r', 15);
+		size_t r = strlcat(dest, "lorem ipsum dolor sit amet", 5);
+		size_t r2 = ft_strlcat(dest2, "lorem ipsum dolor sit amet", 5);
+		printf("%s %i : %s %i\n", dest, (int)r, dest2, (int)r2);
+	}
 	return (0);
 }

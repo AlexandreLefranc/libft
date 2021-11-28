@@ -19,4 +19,4 @@ do
 	rm ./a.out
 done
 
-make clean
+# make clean
