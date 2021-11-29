@@ -6,13 +6,19 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 13:03:37 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/17 17:36:47 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/28 11:51:10 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+t_list *ft_lstnew(void *content)
+{
+	(void)content;
+	return (NULL);
+}
+
+/*
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*new;
@@ -36,3 +42,4 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	new->next = NULL;
 	return (new);
 }
+*/

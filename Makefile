@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2021/11/23 16:47:59 by alefranc         ###   ########.fr        #
+#    Updated: 2021/11/28 12:35:09 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,18 +50,33 @@ SRC =	ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_putstr_fd.c
 
+SRCB =	$(SRC) \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+
 OBJ = $(SRC:.c=.o)
+OBJB = $(SRCB:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+bonus: $(OBJB)
+	ar rcs $(NAME) $(OBJB)
+
 %.o: %.c libft.h
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJB)
 
 fclean: clean
 	rm -f $(NAME)
