@@ -24,5 +24,12 @@ int	main()
 		char	*s = ft_substr("tripouille", 100, 1);
 		printf(" : %s\n", s); free(s);
 	}
+	{
+		char	*str = strdup("1");
+		char	*s;
+		s = ft_substr(str, 42, 42000000);
+		printf(" : %s\n", s);
+		free(str); free(s);
+	}
 	return (0);
 }
