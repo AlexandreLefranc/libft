@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:31:58 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/27 13:05:32 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/29 14:39:32 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include <bsd/string.h>
+/* # include <bsd/string.h> */
 
 typedef struct s_list
 {
