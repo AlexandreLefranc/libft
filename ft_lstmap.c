@@ -12,10 +12,24 @@
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+static t_list	*ft_lstdup(t_list *lst)
 {
-	(void)lst;
-	(void)f;
-	(void)del;
-	return (NULL);
+	t_list	*lstdup;
+
+	if (lst == NULL)
+		return (NULL);
+	while (lst != NULL)
+	{
+
+	}
+}
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list *lst2;
+
+	if (lst == NULL)
+		return (NULL);
+	lst2 = ft_lstdup(lst);
+	ft_lstiter()
 }

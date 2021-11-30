@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:52:37 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/23 17:06:06 by alefranc         ###   ########.fr       */
+/*   Updated: 2021/11/30 14:13:50 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,37 +38,52 @@ static size_t	countwords(char const *s, char c)
 	return (number_of_words);
 }
 
-static void	fill_tab(char **tab, char const *s, char c, int tab_len)
+static void	free_tab(char **tab)
 {
-	size_t	i;
-	size_t	n;
-	size_t	len_word;
+	char	**tab_save;
 
-	tab[tab_len] = NULL;
-	i = 0;
-	n = 0;
-	while (s[i] != '\0')
+	tab_save = tab;
+	while (*tab != NULL)
 	{
-		if (s[i] == c)
-			i++;
+		free(*tab);
+		*tab = NULL;
+		tab++;
+	}
+	free(tab_save);
+	tab_save = NULL;
+}
+
+static int	fill_tab(char **tab, char const *s, char c)
+{
+	char	*ptr;
+	char	*startp;
+	char	*endp;
+
+	ptr = (char *)s;
+	while (*ptr != '\0')
+	{
+		if (*ptr == c)
+			ptr++;
 		else
 		{
-			len_word = 0;
-			while (s[i] != c && s[i] != '\0')
-			{
-				i++;
-				len_word++;
-			}
-			tab[n] = ft_substr(s, i - len_word, len_word);
-			n++;
+			startp = ptr;
+			while (*ptr != c && *ptr != '\0')
+				ptr++;
+			endp = ptr;
+			*tab = ft_substr(s, startp - s, endp - startp);
+			if (*tab == NULL)
+				return (-1);
+			tab++;
 		}
 	}
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	number_of_words;
 	char	**tab;
+	int		r;
 
 	if (s == NULL)
 		return (NULL);
@@ -76,6 +91,11 @@ char	**ft_split(char const *s, char c)
 	tab = (char **)ft_calloc((number_of_words + 1), sizeof(char *));
 	if (tab == NULL)
 		return (NULL);
-	fill_tab(tab, s, c, number_of_words);
+	r = fill_tab(tab, s, c);
+	if (r == -1)
+	{
+		free_tab(tab);
+		return (NULL);
+	}
 	return (tab);
 }

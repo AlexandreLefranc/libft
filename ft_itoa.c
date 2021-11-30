@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 	char	*s;
 
 	n_len = count_n_len(n);
-	s = (char *)malloc((n_len + 1) * sizeof(char));
+	s = (char *)ft_calloc(n_len + 1, sizeof(char));
 	if (s == NULL)
 		return (NULL);
 	fill_s(s, n, n_len);
