@@ -6,13 +6,23 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2021/11/28 12:35:09 by alefranc         ###   ########.fr        #
+#    Updated: 2022/01/18 17:38:14 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = clang
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+
+SRC_IO = 
+
+SRC_BOOL =	ft_isalpha.c \
+			ft_isdigit.c \
+			ft_isalnum.c \
+			ft_isascii.c \
+			ft_isprint.c
+SRC_BOOL2 = $(addprefix src/src_bool/, $(SRC_BOOL))
+
 SRC =	ft_atoi.c \
 		ft_isalpha.c \
 		ft_isdigit.c \
@@ -82,3 +92,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re:	fclean all
+
+test_rule:
+	echo $(SRC_BOOL2)
