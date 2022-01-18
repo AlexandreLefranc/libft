@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "../libft.h"
+#include "libft.h"
 
 static char	shift1mapi(unsigned int i, char c)
 {

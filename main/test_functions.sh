@@ -14,8 +14,8 @@ fi
 
 for func in $list
 do
-	# clang -Wall -Werror -Wextra $func -L. -lft -lbsd
-	clang -Wall -Werror -Wextra $func -L. -lft
+	clang -Wall -Werror -Wextra -Iinclude $func -L. -lft -lbsd
+	# clang -Wall -Werror -Wextra -Iinclude $func -L. -lft
 	./a.out
 	# valgrind --leak-check=full ./a.out
 	rm ./a.out

@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/01/18 19:06:16 by alefranc         ###   ########.fr        #
+#    Updated: 2022/01/18 21:44:22 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,11 @@ SRC_MEM = ft_bzero.c \
 		  ft_memmove.c \
 		  ft_memset.c
 
-SRC_PRINTF =
+SRC_PRINTF = ft_printf.c \
+			 ft_putnbr_size.c \
+			 ft_putstr_size.c \
+			 ft_putarg_size.c \
+			 ft_putptr_puthexa_putunsigned_size.c
 
 SRC_STR = ft_split.c \
 		  ft_striteri.c \
@@ -82,7 +86,8 @@ SRC_SYS =
 
 SRC_TAB =
 
-HEADER = libft.h
+HEADER = libft.h \
+		 ft_printf.h
 
 # Preprocessing #
 

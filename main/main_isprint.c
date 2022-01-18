@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <ctype.h>
-#include "../libft.h"
+#include "libft.h"
 
 int	main()
 {
