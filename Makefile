@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/01/18 21:44:22 by alefranc         ###   ########.fr        #
+#    Updated: 2022/01/18 23:16:14 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ SRC_DLST =
 SRC_IO = ft_putchar_fd.c \
 		 ft_putendl_fd.c \
 		 ft_putnbr_fd.c \
-		 ft_putstr_fd.c
+		 ft_putstr_fd.c \
+		 get_next_line.c
 
 SRC_LST = ft_lstadd_back.c \
 		  ft_lstclear.c \
@@ -87,7 +88,8 @@ SRC_SYS =
 SRC_TAB =
 
 HEADER = libft.h \
-		 ft_printf.h
+		 ft_printf.h \
+		 get_next_line.h
 
 # Preprocessing #
 
