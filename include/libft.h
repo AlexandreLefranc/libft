@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -40,6 +41,8 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	ft_strfreetab(char **tab);
+char	*ft_strjoin2(int nb, ...);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

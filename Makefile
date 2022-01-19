@@ -73,6 +73,7 @@ SRC_STR = ft_split.c \
 		  ft_tolower.c \
 		  ft_strchr.c \
 		  ft_strjoin.c \
+		  ft_strjoin2.c \
 		  ft_strlen.c \
 		  ft_strnstr.c \
 		  ft_strtrim.c \
@@ -81,9 +82,10 @@ SRC_STR = ft_split.c \
 		  ft_strlcat.c \
 		  ft_strmapi.c \
 		  ft_strrchr.c \
-		  ft_substr.c
+		  ft_substr.c \
+		  ft_strfreetab.c
 
-SRC_SYS = 
+SRC_SYS =
 
 SRC_TAB =
 
