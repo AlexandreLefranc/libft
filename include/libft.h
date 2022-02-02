@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:31:58 by alefranc          #+#    #+#             */
-/*   Updated: 2021/11/29 14:39:32 by alefranc         ###   ########.fr       */
+/*   Updated: 2022/02/02 07:09:47 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,12 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	ft_strfreetab(char **tab);
 char	*ft_strjoin2(int nb, ...);
+
+char	*ft_strtabjoin(char **tab, char *sep);
+void	ft_strtabfree(char **tab);
+size_t	ft_strtablen(char **tab);
+size_t	ft_strtabsize(char **tab);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

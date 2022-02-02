@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/01/18 23:16:14 by alefranc         ###   ########.fr        #
+#    Updated: 2022/02/02 07:09:22 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,10 @@ SRC_STR = ft_split.c \
 		  ft_strmapi.c \
 		  ft_strrchr.c \
 		  ft_substr.c \
-		  ft_strfreetab.c
+		  ft_strtabfree.c \
+		  ft_strtabjoin.c \
+		  ft_strtablen.c \
+		  ft_strtabsize.c
 
 SRC_SYS =
 
