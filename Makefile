@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/02/02 07:09:22 by alefranc         ###   ########.fr        #
+#    Updated: 2022/03/11 13:48:35 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,9 @@ SRC_BOOL = ft_isalnum.c \
 
 SRC_CONVERT = ft_atoi.c \
 			  ft_itoa.c
+
+SRC_DEBUG = ft_calloc_debug.c \
+			ft_free_debug.c
 
 SRC_DLST =
 
