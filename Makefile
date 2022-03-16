@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/03/11 14:29:19 by alefranc         ###   ########.fr        #
+#    Updated: 2022/03/16 15:50:01 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC_BOOL = ft_isalnum.c \
 		   ft_isalpha.c \
 		   ft_isascii.c \
 		   ft_isdigit.c \
+		   ft_isnumber.c \
 		   ft_isprint.c
 
 SRC_CONVERT = ft_atoi.c \
