@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:31:58 by alefranc          #+#    #+#             */
-/*   Updated: 2022/03/16 15:50:50 by alefranc         ###   ########.fr       */
+/*   Updated: 2022/03/17 07:55:22 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstprevlast(t_list *lst);
 int		ft_lstsize(t_list *lst);
 
 // src_math

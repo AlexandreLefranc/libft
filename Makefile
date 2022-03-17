@@ -6,7 +6,7 @@
 #    By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/12 18:24:33 by alefranc          #+#    #+#              #
-#    Updated: 2022/03/16 15:50:01 by alefranc         ###   ########.fr        #
+#    Updated: 2022/03/17 08:04:33 by alefranc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRC_LST = ft_lstadd_back.c \
 		  ft_lstadd_front.c \
 		  ft_lstdelone.c \
 		  ft_lstlast.c \
+		  ft_lstprevlast.c \
 		  ft_lstnew.c
 
 SRC_MATH =
