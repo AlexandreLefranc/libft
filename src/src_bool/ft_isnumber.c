@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 15:46:28 by alefranc          #+#    #+#             */
-/*   Updated: 2022/03/16 16:02:36 by alefranc         ###   ########.fr       */
+/*   Updated: 2022/03/20 11:04:29 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_isnumber(char *str)
 
 	if (str[0] == '\0')
 		return (0);
+	if (str[0] == '-')
+		str++;
 	i = 0;
 	while (str[i] != '\0')
 	{
