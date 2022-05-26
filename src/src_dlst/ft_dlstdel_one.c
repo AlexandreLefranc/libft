@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc_debug.c                                  :+:      :+:    :+:   */
+/*   ft_dlstdel_one.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 13:46:51 by alefranc          #+#    #+#             */
-/*   Updated: 2022/05/26 10:12:41 by alefranc         ###   ########.fr       */
+/*   Created: 2022/04/28 12:16:38 by alefranc          #+#    #+#             */
+/*   Updated: 2022/05/04 18:49:11 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc_debug(size_t nmemb, size_t size, char *msg)
+void	ft_dlstdel_one(t_dlst *dlst, void (*del)(void *))
 {
-	void	*ptr;
-
-	if (nmemb * size > 2147483647)
-		return (NULL);
-	ptr = (void *)malloc(nmemb * size);
-	dprintf(2, "malloc	%p: %s\n", ptr, msg);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	if (dlst == NULL)
+		return ;
+	if (del != NULL)
+		del(dlst->content);
+	free(dlst);
 }

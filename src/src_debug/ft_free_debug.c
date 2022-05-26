@@ -6,9 +6,11 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 13:49:21 by alefranc          #+#    #+#             */
-/*   Updated: 2022/03/11 13:49:24 by alefranc         ###   ########.fr       */
+/*   Updated: 2022/05/26 10:12:53 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_free_debug(void *ptr, char *msg)
 {

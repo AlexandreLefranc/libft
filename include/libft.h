@@ -6,7 +6,7 @@
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 12:31:58 by alefranc          #+#    #+#             */
-/*   Updated: 2022/03/17 07:55:22 by alefranc         ###   ########.fr       */
+/*   Updated: 2022/05/26 10:17:22 by alefranc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct s_dlst
+{
+	void			*content;
+	struct s_dlst	*next;
+	struct s_dlst	*prev;
+}	t_dlst;
 
 // src_bool
 int		ft_isalnum(int c);
@@ -41,6 +48,18 @@ void	*ft_calloc_debug(size_t nmemb, size_t size, char *msg);
 void	ft_free_debug(void *ptr, char *msg);
 
 // src_dlst
+t_dlst	*ft_dlstnew(void *content);
+void	ft_dlstadd_back(t_dlst **dlst, t_dlst *new);
+void	ft_dlstadd_front(t_dlst **dlst, t_dlst *new);
+t_dlst	*ft_dlstfirst(t_dlst *dlst);
+t_dlst	*ft_dlstlast(t_dlst *dlst);
+size_t	ft_dlstsize(t_dlst *dlst);
+size_t	ft_dlstsize_left(t_dlst *dlst);
+size_t	ft_dlstsize_right(t_dlst *dlst);
+void	ft_dlstdel_one(t_dlst *dlst, void (*del)(void *));
+void	ft_dlstdel_all(t_dlst **dlst, void (*del)(void *));
+void	ft_dlstiter(t_dlst *dlst, void (*f)(void *));
+t_dlst	*ft_dlstmap(t_dlst *dlst, void *(*f)(void *), void (*del)(void *));
 
 // src_io
 void	ft_putchar_fd(char c, int fd);
@@ -86,10 +105,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *haystack, const char *needle);
-void	ft_strtabfree(char **tab);
-char	*ft_strtabjoin(char **tab, char *sep);
-size_t	ft_strtablen(char **tab);
-size_t	ft_strtabsize(char **tab);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
@@ -98,5 +113,9 @@ int		ft_toupper(int c);
 // src_sys
 
 // src_tab
+void	ft_strtabfree(char **tab);
+char	*ft_strtabjoin(char **tab, char *sep);
+size_t	ft_strtablen(char **tab);
+size_t	ft_strtabsize(char **tab);
 
 #endif

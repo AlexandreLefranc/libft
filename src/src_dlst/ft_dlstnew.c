@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc_debug.c                                  :+:      :+:    :+:   */
+/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alefranc <alefranc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 13:46:51 by alefranc          #+#    #+#             */
-/*   Updated: 2022/05/26 10:12:41 by alefranc         ###   ########.fr       */
+/*   Created: 2022/02/09 15:58:43 by alefranc          #+#    #+#             */
+/*   Updated: 2022/04/22 16:05:10 by lmarecha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc_debug(size_t nmemb, size_t size, char *msg)
+t_dlst	*ft_dlstnew(void *content)
 {
-	void	*ptr;
+	t_dlst	*node;
 
-	if (nmemb * size > 2147483647)
+	node = malloc(sizeof(*node) * 1);
+	if (node == NULL)
 		return (NULL);
-	ptr = (void *)malloc(nmemb * size);
-	dprintf(2, "malloc	%p: %s\n", ptr, msg);
-	if (ptr == NULL)
-		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	node->content = content;
+	node->next = NULL;
+	node->prev = NULL;
+	return (node);
 }
